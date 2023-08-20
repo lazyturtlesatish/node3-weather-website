@@ -43,7 +43,7 @@ app.use(express.static(publicDirectoryPath));
 const fetchWeatherForecast = async (location) => {
   return axios
     .get(
-      `http://api.weatherapi.com/v1/forecast.json?key=96696c15098f495880895701231508&q=${location}&days=1&aqi=no&alerts=no`
+      `https://api.weatherapi.com/v1/forecast.json?key=96696c15098f495880895701231508&q=${location}&days=1&aqi=no&alerts=no`
     )
     .then((res) => res.data)
     .catch((err) => {
@@ -130,5 +130,5 @@ app.get('*',(req,res)=>{
 
 // 5. Start the server
 app.listen(port, () => {
-  console.log(`Server started on http://localhost:${port}`);
+  console.log(`Server started on https://localhost:${port}`);
 });
