@@ -10,6 +10,7 @@ import axios from "axios";
 
 // 2. Initialize express app
 const app = express();
+const port= process.env.PORT || 3000;
 
 
 
@@ -128,7 +129,6 @@ app.get('*',(req,res)=>{
 // If you need to handle another case under "/help", you should use another method (like POST) or a different path.
 
 // 5. Start the server
-const PORT = 3000;
-app.listen(PORT, () => {
-  console.log(`Server started on http://localhost:${PORT}`);
+app.listen(port, () => {
+  console.log(`Server started on http://localhost:${port}`);
 });
